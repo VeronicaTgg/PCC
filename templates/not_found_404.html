@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% block title %}404 Resource not found{% endblock %}
+
+{% block content %}
+{% block head %}
+<link href="{{ url_for('static', filename='remixicon.css') }}" rel="stylesheet" />
+{% endblock %}
+<div class="container-fluid h-100">
+    <div class="row h-100 justify-content-center pt-5">
+        <div class="col col-md-3 text-center p-2">
+            <i class="ri-forbid-line"></i>
+            <h5>Rsource not found</h5>
+            <a class="btn btn-primary btn-block" href="/">Home</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

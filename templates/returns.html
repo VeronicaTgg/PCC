@@ -1,0 +1,116 @@
+{% extends "index.html" %}
+
+{% block title %}PCC Project{% endblock %}
+
+{% block content %}
+
+<!-- make a container -->
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col-lg-3"></div>
+        <div class="col">
+            <!-- insert data -->
+            <p>Inserisci latitudine e longitudine:</p>
+            <input id="lat" class="form-control form-control mb-3" type="text" placeholder="Latidutine">
+            <input id="lon" class="form-control form-control  mb-3" type="text" placeholder="Longitudine">
+            <a id="return" class="btn btn-primary  btn-block mb-3" role="button">Effettua un reso</a>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <!-- button to get vehicle postion data -->
+            <a id="update_vehicle" class="btn btn-secondary btn-block mb-3 d-none" role="button">Update Postion Data</a>
+            <div id="result" style="white-space: pre-line" class="col text-center">
+                <!-- spinner -->
+                <div id="spinner" class="spinner-border d-none" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>
+
+{% block scripts %}
+
+<!-- import Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+
+    var vehicle_position_url
+
+    jQuery.noConflict();
+    // listen for button click
+    jQuery("#return").on("click", () => {
+        // start the spinner while loading 
+        jQuery("#spinner").toggleClass("d-none")
+        // get latitude and longitude
+        lat = jQuery("#lat").val()
+        lon = jQuery("#lon").val()
+        // if fields are empty
+        if (lat == "" || lon == "") {
+            jQuery("#spinner").toggleClass("d-none")
+            alert("insert values")
+        } else {
+            // calculate the url
+            url = window.location.href + `/getvehicle?lat=${lat}&lon=${lon}`
+            // do the request
+            jQuery.get(url)
+                // when done
+                .then(function (data, status) {
+                    // the "data" variable has the number of the vehicle
+                    url_position = window.location.href + `/getvehicleposition?vehicle=${data}`
+                    
+                    vehicle_position_url = url_position
+                    // query the position of the vehicle
+                    jQuery.get(url_position)
+                        .then((data_position) => {
+                            // show button to update data
+                            jQuery("#spinner").toggleClass("d-none")
+                            jQuery("#update_vehicle").toggleClass("d-none")
+                            // append data to html
+                            jQuery("#result").append("Vehicle number " + data + " is going to pick up your request!");
+                            jQuery("#result").append("\n Vehicle data information:");
+                            jQuery("#result").append("\n" + data_position);
+                        })
+                        .fail(() => {
+                            // if no data about the vehicle postion
+                            jQuery("#spinner").toggleClass("d-none")
+                            jQuery("#update_vehicle").toggleClass("d-none")
+                            jQuery("#result").append("Vehicle number " + data + " is going to pick up your request!");
+                            jQuery("#result").append("No vehicle informations, try again");
+                        })
+                })
+                // if error
+                .fail(() => {
+                    jQuery("#spinner").toggleClass("d-none")
+                    alert("Error on processing your request, try again!")
+                })
+        }
+    })
+    // update vehicle data
+    jQuery("#update_vehicle").on("click", () => {
+        jQuery("#spinner").toggleClass("d-none")
+        jQuery.get(vehicle_position_url)
+            .then((data_position) => {
+                // display information 
+                jQuery("#spinner").toggleClass("d-none")
+                jQuery("#result").append("\n Vehicle data information:");
+                jQuery("#result").append("\n" + data_position);
+            })
+            .fail(() => {
+                // if no data about the vehicle postion
+                jQuery("#spinner").toggleClass("d-none")
+                jQuery("#result").append("No vehicle informations, try again");
+            })
+    })
+</script>
+
+
+{% endblock %}
+
+
+{% endblock %}

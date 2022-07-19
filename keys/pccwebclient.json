@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pccreverselogistic",
+  "private_key_id": "cda80c5332d123bf3cded8f036a568b669c40b71",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQChF/kEYK9wRc1d\nkyEg0KkMabHcpoA46viL1lgLjfTCY1sTEDwG61HZkLo5fbGb+wqJKEw9ciT8D239\nO+zBKMjevxskTCKYLFysXpniEDvUGQi4AIiR0xZL6ax8IuCSnWkNE8wQykrqM85E\ngYrj0akiFXj9Uh5bxPye+nNAZslSKeOh93TmO9R+42Ie2Yvc84+xdRCjM77HzODU\n85q6iiqEwRyaxhLOQ7LWfwuGImNiDyAvChApSuL2ts2mx9jAC8zSmrKz2h68FN7p\nnEifJ87vOtosCRazRR4RVOxjzpbcYa9fuyUTtZADrmtVqgDY9+sj0zfXsGbxjlHb\njhqGkjWLAgMBAAECggEABFmDzVQDb8lLmSWqTcWix1OwmmqattJGtRcBMSXJp5/M\nC0uBlvnLL8HOpXAVZg3mx5eE9bLio25Z4+4aEU/HfnpsuzArFS6RBLA75FhJpUQ4\nqn1wTwUC+OMYV58PrwlSXmGU6FHRjHY5MR8Cw3xwpVSCNOvwtXaFSQL1SwgX5/Jv\n8bgrFLnTVCbAFDZMHfCCJQCZPJnmhPp8x4h8RKIfxD9nAbs1FAqye8d2G+uwDmws\n8TjwQkYk9PKCp0Atmiulio/LCVEyP7D3M4yy1aNB/B6QHC6r8Xx+DEFeVQU1Ukfc\nfwHa8B20W0HHPfY2Dws7VjoSoalcvg6Tw1WMA93IYQKBgQDZ5Uqb939C0l9tII9+\n6WwgvIp8sCHa8PcVK9zcXgKQFdhe2AHANnFw+KMGAortOp+s5NciA5gWY51BsSL8\nBuYsloNuhHeUNmjxz3MmsWZ5ByaQQUFADqJcrv1j/m4VRNNJ6Eg7NDI+d2aYIhfw\nO8iLYWJzI2aypo/lyp7R04lyMwKBgQC9Q8ej2rSWmJJj/fpGNLuIx1GD/azYZU0R\n7z9HmmQujYGeozruPK4cR7up+svVx8qm0JkDWckHWGB+CqU4lf0QVtakLmMFlmf2\nm6NOZ/BkPRDAV20xcLeGzCnULbKYv6rdOTC6M2RzpbDQkho+Z7Ihynd1sGYY8CTE\n+Fgmk/nHSQKBgCef6PeABKaUN0JTH4VG0aEKaGzQYve7xlMVTO7OMc0eC+EDix33\nSJ3wuUTIhZcqiAsa+nx3BttbdieSHPiUEJufK3uXn19WnbMLtLcen7H2uO6Wz1Tk\n1GXidLYQeNhpUbspAKmzjkeJ0yBrYssPNCMUrKCfmXd3jseNF2C1BVO9AoGBAJKd\nvD0pwrXa8aS2bjgOx6xYw8QdMtXb+81F6l58stkBVAVha9h8d2B/DVjLaTZt9IYv\nmClpV3ryMqXRd1aTkpwiuVoseRcuAdGfle26RRZR2/U0hOlE6VdqN4kf8Xe1GxcP\nI7lK8KlKFOQuGlh3mh3lK4+nHCB7f/B6dkdEYL3JAoGBAKmv1ZsFigOH8gmDjUHt\n9W/Iz1Odg4kyw3Dy5DCGMGPc5pHsJrhQSMwtK8be6cpKt22raRlmDev7ai6q2+KP\n6kneJxiZI34ynuHIigdoaOOAhPRnE5O2RJP02/h6tdfaG8+LXUCquW/tHi3FKG/S\nA/sW9o7tGpVNG9c89BGtVW7r\n-----END PRIVATE KEY-----\n",
+  "client_email": "pccweb@pccreverselogistic.iam.gserviceaccount.com",
+  "client_id": "118111252635517889006",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pccweb%40pccreverselogistic.iam.gserviceaccount.com"
+}
